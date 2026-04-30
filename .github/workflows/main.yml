@@ -2,32 +2,32 @@ name: STWDO Dormitory Monitor
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
-  workflow_dispatch:
+    - cron: '*/5 * * * *'   # every 5 minutes
+  workflow_dispatch:          # allow manual trigger from GitHub UI
 
 jobs:
   monitor:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write         # needed to commit state back to repo
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v5.6.0
         with:
-          python-version: '3.11'
+          python-version: '3.12'
 
       - name: Install dependencies
         run: pip install requests beautifulsoup4 lxml
 
       - name: Run monitor
         env:
-          EMAIL_ADDRESS:      ${{ secrets.EMAIL_ADDRESS }}
+          EMAIL_ADDRESS:     ${{ secrets.EMAIL_ADDRESS }}
           EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
-          NTFY_TOPIC:         ${{ secrets.NTFY_TOPIC }}
+          NTFY_TOPIC:        ${{ secrets.NTFY_TOPIC }}
         run: python monitor_cloud.py
 
       - name: Save state back to repo
