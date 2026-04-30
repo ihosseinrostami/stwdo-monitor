@@ -10,7 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write         # needed to commit state back to repo
-
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
