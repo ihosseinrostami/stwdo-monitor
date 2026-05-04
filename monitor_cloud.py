@@ -52,16 +52,12 @@ def fetch_offer_text() -> str:
     resp.raise_for_status()
 
     soup = BeautifulSoup(resp.text, "html.parser")
-    for tag in soup(["script", "style", "noscript", "meta", "link", "svg", "img"]):
+    for tag in soup(["script", "style", "noscript", "meta", "link", "svg", "img", "footer", "header", "nav"]):
         tag.decompose()
 
-    section = (
-        soup.find(id="residential-offer-list")
-        or soup.find("section", class_=lambda c: c and "offer" in c.lower())
-        or soup.find("main")
-        or soup.body
-    )
-    return section.get_text(separator="\n", strip=True) if section else soup.get_text()
+    # Always use the full body to avoid missing any offer section
+    section = soup.body or soup
+    return section.get_text(separator="\n", strip=True)
 
 
 def content_hash(text: str) -> str:
