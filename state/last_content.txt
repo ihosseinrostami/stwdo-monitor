@@ -1,7 +1,7 @@
 Menü
 Stadt
 Alle
-Dortmund
+Dortmund (Keine Angebote)
 Hagen (Keine Angebote)
 Iserlohn
 Soest (Keine Angebote)
@@ -10,7 +10,7 @@ Alle
 Am Gardenkamp 51 (Keine Angebote)
 Baroper Straße 331-335 (Keine Angebote)
 Emil-Figge-Straße 3-11 (Keine Angebote)
-Ostenbergstraße 97-101
+Ostenbergstraße 97-101 (Keine Angebote)
 Ostenbergstraße 109 (Keine Angebote)
 Vogelpothsweg 82-104 (Keine Angebote)
 Im Alten Holz 133-135 (Keine Angebote)
