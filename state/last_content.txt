@@ -1,7 +1,7 @@
 Menü
 Stadt
 Alle
-Dortmund (Keine Angebote)
+Dortmund
 Hagen (Keine Angebote)
 Iserlohn
 Soest (Keine Angebote)
@@ -15,8 +15,8 @@ Ostenbergstraße 109 (Keine Angebote)
 Vogelpothsweg 82-104 (Keine Angebote)
 Im Alten Holz 133-135 (Keine Angebote)
 Steubenstraße 14-18
-Vogelpothsweg 106-122 (Keine Angebote)
-Meitnerweg 3-16 (Keine Angebote)
+Vogelpothsweg 106-122
+Meitnerweg 3-16
 Ludorffstraße 43, 45 (Keine Angebote)
 Am Gardenkamp 53-55 (Keine Angebote)
 Emil-Figge-Straße 15-39 (Keine Angebote)
